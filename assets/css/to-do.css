@@ -1,0 +1,82 @@
+.to-do .icon-box {
+  padding: 30px 40px;
+  margin-top: 35px;
+  height: 160px;
+  position: relative;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.to-do .icon {
+  position: absolute;
+  top: -36px;
+  left: calc(50% - 36px);
+  transition: 0.2s;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 72px;
+  height: 72px;
+  background: #ff5821;
+}
+
+.to-do .icon i {
+  color: #fff;
+  font-size: 24px;
+  line-height: 0;
+}
+
+.to-do .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.to-do .title a {
+  color: #343a40;
+}
+
+.to-do .icon-box:hover .icon {
+  background: #fff;
+  border: 2px solid #ff5821;
+}
+
+.to-do .icon-box:hover .icon i {
+  color: #ff5821;
+}
+
+.to-do .icon-box:hover .title a {
+  color: #ff5821;
+}
+
+.to-do .description {
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.to-do .action {
+  cursor: pointer;
+}
+
+.to-do .action-caption {
+  text-decoration: underline;
+}
+
+.to-do .done {
+  color: turquoise;
+}
+
+.to-do .clear {
+  color: orange;
+}
+
+.to-do .done:hover {
+  color: rgb(15, 162, 147);
+}
+
+.to-do .clear:hover {
+  color: rgb(200, 131, 3);
+}

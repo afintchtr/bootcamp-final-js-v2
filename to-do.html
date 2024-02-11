@@ -37,6 +37,7 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/to-do.css" rel="stylesheet" />
 
     <!-- =======================================================
   * Template Name: Flexor
@@ -60,7 +61,7 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li>
-              <a class="nav-link scrollto active" href="index.html">Home</a>
+              <a class="nav-link scrollto" href="index.html">Home</a>
             </li>
             <li>
               <a class="nav-link scrollto" href="about-us.html">About us</a>
@@ -72,7 +73,7 @@
               <a class="nav-link scrollto" href="portfolio.html">Portfolio</a>
             </li>
             <li><a class="nav-link scrollto" href="blog.html">Blog</a></li>
-            <li><a class="nav-link scrollto" href="to-do.html">To do Js</a></li>
+            <li><a class="nav-link scrollto active" href="to-do.html">To do Js</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
@@ -82,8 +83,8 @@
     <!-- End Header -->
 
     <main id="main">
-      <!-- ======= Services Section ======= -->
-      <section id="services" class="services section-bg">
+      <!-- ======= To Do Section ======= -->
+      <section id="to-do" class="to-do section-bg">
         <div class="container">
           <div class="section-title" data-aos="fade-up">
             <h2>Simple To do Apps</h2>
@@ -96,102 +97,67 @@
             </p>
           </div>
 
-          <div class="row">
-            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <form data-aos="fade-up" class="mt-5 mb-2" id="to-do-form">
+            <div class="py-2">
+              <label for="to-do" class="form-label fw-semibold pb-2"
+                >Enter what you want to do here</label
+              >
+              <div>
+                <input
+                  type="text"
+                  class="form-control fs-6"
+                  id="to-do-title"
+                  aria-describedby="to-do-title"
+                  placeholder="write title here (max. 25 characters)"
+                  maxlength="25"
+                  minlength="1"
+                />
+              </div>
+            </div>
+            <div class="py-2">
+              <div class="mb-3">
+                <textarea
+                  class="form-control fs-6"
+                  id="to-do-description"
+                  aria-describedby="to-do-description"
+                  placeholder="write description here (max. 200 characters)"
+                  style="height: 80px;"
+                  maxlength="200"
+                  minlength="1"
+                /></textarea>
+              </div>
+            </div>
+            <div class="d-grid">
+              <button
+                id="add-to-do"
+                type="submit"
+                class="btn btn-warning"
+              >
+                Add to do
+              </button>
+            </div>            
+          </form>
+          <p data-aos="fade-up">please refresh page first if you want to change status to done.</p>
+          <ul class="to-do-list" id="to-do-list" style="padding: 0;">
+            <!-- <li class="to-do-card row" data-aos="fade-up">              
               <div class="icon-box">
-                <div class="icon"><i class="bi bi-briefcase"></i></div>
                 <h4 class="title"><a href="">User Experience (UX)</a></h4>
                 <p class="description">
                   Focuses on improving the overall user experience of a product
                   by optimizing usability, accessibility, and satisfaction
                   through research, testing, and design iterations.
                 </p>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-card-checklist"></i></div>
-                <h4 class="title">
-                  <a href="">Industrial Design Consulting</a>
-                </h4>
-                <p class="description">
-                  Involves the creation and development of physical products,
-                  considering factors such as form, function, aesthetics,
-                  ergonomics, and manufacturability.
-                </p>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-bar-chart"></i></div>
-                <h4 class="title"><a href="">Innovation Consulting</a></h4>
-                <p class="description">
-                  Helps businesses identify opportunities for innovation and
-                  develop new product concepts or features that address unmet
-                  needs, differentiate from competitors, and drive market
-                  growth.
-                </p>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-binoculars"></i></div>
-                <h4 class="title"><a href="">Sustainability Consulting</a></h4>
-                <p class="description">
-                  Aims to integrate principles of sustainability and
-                  environmental responsibility into product design processes to
-                  minimize environmental impact and promote sustainable
-                  practices.
-                </p>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-brightness-high"></i></div>
-                <h4 class="title">
-                  <a href="">Technology and Engineering Consulting</a>
-                </h4>
-                <p class="description">
-                  Provides expertise in leveraging emerging technologies and
-                  technical feasibility assessments to optimize product
-                  performance, functionality, and reliability.
-                </p>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-                <h4 class="title">
-                  <a href="">Strategy and Market Consulting</a>
-                </h4>
-                <p class="description">
-                  Focuses on market analysis, competitive intelligence, trend
-                  forecasting, and strategic planning to guide product design
-                  decisions and maximize market relevance, customer
-                  satisfaction, and business success.
-                </p>
-              </div>
-            </div>
+                <div class="footer-card d-flex gap-4 justify-content-end">
+                  <span class="action done"><span class="action-caption">done</span> ✅</span>
+                  <span class="action clear"><span class="action-caption">clear</span> ❌</span>
+                </div>
+              </div>              
+            </li> -->
+          </ul>      
+          
+          <div data-aos="fade-up" class="d-flex gap-2 justify-content-end mt-5">
+            <button type="button" class="btn btn-primary" id="format-todos-done">Clear done activities</button>
+            <button type="button" class="btn btn-danger" id="format-todos">Clear all activities</button>
           </div>
         </div>
       </section>
@@ -334,5 +300,6 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/to-do.js"></script>
   </body>
 </html>
