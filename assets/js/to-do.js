@@ -1,6 +1,13 @@
+// JavaScript code for To-do apps
+//
+//
+// Array penampung objek-objek to-do item
 let todoListArray = [];
+
+// Elemen to-do list (kumpulan to-do item)
 const todoList = document.getElementById("to-do-list");
 
+// Fungsi untuk membuat elemen to-do item card yang baru
 const createTodoElement = (id, status, title, description) => {
   const wrapper = document.createElement("div");
   wrapper.setAttribute("class", "to-do-card row");
@@ -32,21 +39,20 @@ const createTodoElement = (id, status, title, description) => {
   actionDone.setAttribute("class", "action done");
   actionDone.textContent = "✅ ";
   actionDone.addEventListener("click", () => {
-    const todoCardList = document.getElementById("to-do-list");
     if (status == false) {
       todoListArray[id].todoDone = true;
       localStorage.setItem("todoList", JSON.stringify(todoListArray));
       box.style.backgroundColor = "#deffe7";
-      while (todoCardList.hasChildNodes()) {
-        todoCardList.removeChild(todoCardList.firstChild);
+      while (todoList.hasChildNodes()) {
+        todoList.removeChild(todoList.firstChild);
       }
       renderTodoList();
     } else {
       todoListArray[id].todoDone = false;
       localStorage.setItem("todoList", JSON.stringify(todoListArray));
       box.style.backgroundColor = "#fff";
-      while (todoCardList.hasChildNodes()) {
-        todoCardList.removeChild(todoCardList.firstChild);
+      while (todoList.hasChildNodes()) {
+        todoList.removeChild(todoList.firstChild);
       }
       renderTodoList();
     }
@@ -62,11 +68,10 @@ const createTodoElement = (id, status, title, description) => {
   actionClear.setAttribute("class", "action clear");
   actionClear.textContent = "❌ ";
   actionClear.addEventListener("click", () => {
-    const todoCardList = document.getElementById("to-do-list");
     todoListArray.splice(id, 1);
     localStorage.setItem("todoList", JSON.stringify(todoListArray));
-    while (todoCardList.hasChildNodes()) {
-      todoCardList.removeChild(todoCardList.firstChild);
+    while (todoList.hasChildNodes()) {
+      todoList.removeChild(todoList.firstChild);
     }
     renderTodoList();
   });
@@ -92,6 +97,7 @@ const createTodoElement = (id, status, title, description) => {
   todoList.appendChild(wrapper);
 };
 
+// Fungsi untuk melakukan render to-do list
 const renderTodoList = () => {
   todoListArray.forEach((element, idx) => {
     createTodoElement(
@@ -101,22 +107,26 @@ const renderTodoList = () => {
       element.todoDescription
     );
   });
-
-  for (let idx = 0; idx < todoListArray.length; idx++) {}
 };
 
+// Cek apakah terdapat data pada Local storage,
+// apabila ada maka tampilkan data tersebut dengan fungsi render
 let isLocalDataPresent = localStorage.getItem("todoList");
 if (isLocalDataPresent !== null) {
   todoListArray = JSON.parse(isLocalDataPresent);
   renderTodoList();
 }
 
+// Deklarasi variabel elemen form to-do item input
 const todoForm = document.getElementById("to-do-form");
-const todoInputTitle = document.getElementById("to-do-title");
-const todoInputDescription = document.getElementById("to-do-description");
 
+// Validasi untuk mengecek apakah field Title dan Description telah terisi atau belum
+// Jika sudah maka jalankan fungsi simpan data
+// Namun jika belum maka tidak akan menjalankan apa-apa
 todoForm.addEventListener("submit", (event) => {
   event.preventDefault();
+  const todoInputTitle = document.getElementById("to-do-title");
+  const todoInputDescription = document.getElementById("to-do-description");
   const todoValue = {
     isDone: false,
     title: todoInputTitle.value,
@@ -128,49 +138,44 @@ todoForm.addEventListener("submit", (event) => {
   saveTodo();
 });
 
+// Fungsi untuk menyimpan isi form menjadi data to-do item
 const saveTodo = () => {
   const todoInputTitle = document.getElementById("to-do-title").value;
   const todoInputDescription =
     document.getElementById("to-do-description").value;
-  const todoCardList = document.getElementById("to-do-list");
-
   const todoObject = {
     todoId: todoListArray.length + 1,
     todoDone: false,
     todoTitle: todoInputTitle,
     todoDescription: todoInputDescription,
   };
-
   todoListArray.push(todoObject);
   localStorage.setItem("todoList", JSON.stringify(todoListArray));
-  while (todoCardList.hasChildNodes()) {
-    todoCardList.removeChild(todoCardList.firstChild);
+  while (todoList.hasChildNodes()) {
+    todoList.removeChild(todoList.firstChild);
   }
   renderTodoList();
 };
 
+// Fungsi untuk menghapus seluruh item pada to-do list
 const formatTodos = document.getElementById("format-todos");
 formatTodos.addEventListener("click", () => {
-  const todoCardList = document.getElementById("to-do-list");
-
-  while (todoCardList.hasChildNodes()) {
-    todoCardList.removeChild(todoCardList.firstChild);
+  while (todoList.hasChildNodes()) {
+    todoList.removeChild(todoList.firstChild);
   }
-
   todoListArray.splice(0, todoListArray.length);
   localStorage.setItem("todoList", JSON.stringify(todoListArray));
 });
 
+// Fungsi untuk menghapus seluruh item pada to-do list yang memiliki status Done
 const formatTodosDone = document.getElementById("format-todos-done");
 formatTodosDone.addEventListener("click", () => {
-  const todoCardList = document.getElementById("to-do-list");
-
   todoListArray = todoListArray.filter(function (object) {
     return object.todoDone != true;
   });
   localStorage.setItem("todoList", JSON.stringify(todoListArray));
-  while (todoCardList.hasChildNodes()) {
-    todoCardList.removeChild(todoCardList.firstChild);
+  while (todoList.hasChildNodes()) {
+    todoList.removeChild(todoList.firstChild);
   }
   renderTodoList();
 });
