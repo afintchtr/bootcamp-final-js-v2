@@ -8,32 +8,35 @@ Flexor dapat dilihat di link https://afintchtr.github.io/
 Berikut merupakan penjelasan *requirement* penugasan.
 
 ---
-### <u>Kepaduan seluruh halaman</u>
-Flexor merupakan sebuah usaha di bidang desain produk. Seluruh laman yang ada pada Flexor dapat dibuka dan berisi hal yang berkaitan dengan desain produk. Sesuai dengan *requirement*, terdapat beberapa laman pada Flexor, yakni sebagai berikut.
+### Kepaduan seluruh halaman
+Flexor merupakan sebuah jasa di bidang konsultasi product design. Seluruh laman yang ada pada Flexor dapat dibuka dan berisi hal yang berkaitan dengan desain produk. Sesuai dengan *requirement*, terdapat beberapa laman pada Flexor, yakni sebagai berikut.
 - **Home**\
-lorem ipsum 25 adadad ad
+Bagian tubuh halaman utama memuat beberapa section, antara lain Jumbotron yang di dalamnya memuat button untuk menampilkan modal yang berisi pricing dari langganan Flexor, sesuai dengan kriteria penugasan. Section di bawahnya masih terdapat alasan mengapa harus menggunakan Flexor, klien, berbagai macam layanan terkait desain produk, testimoni pelanggan, dan FAQ. Seluruh konten telah disesuaikan dengan jenis jasa dari Flexor itu sendiri, yakni konsultan di bidang product design. 
 
 - **About us**\
-lorem ipsum 25 ada fzsg
+Sesuai nama halamannya, bagian ini memuat informasi mengenai Flexor, nilai-nilai yang dijunjung perusahaan, dan juga orang-orang yang terlibat (tentu hanya fiktif belaka).
 
 - **Contact us**\
-lorem ipsum 25 sdgsdgzs
+Halaman ini memuat informasi mengenai bagaimana cara calon klien menghubungi Flexor. Sebagai catatan, mekanisme mengirim email dari form yang ada belum dapat bekerja.
 
 - **Portfolio**\
-lorem ipsum 25 sdgsdg
+Halaman ini memuat informasi mengenai produk-produk klien yang sebelumnya telah menjalin kerjasama dengan Flexor (tentu hanya fiktif belaka). Produk yang tercantum berasal dari template Bootstrap.
 
 - **Blog**\
-lorem ipsum 25 SDGSDG
+Halaman Blog memuat berbagai macam artikel yang telah tim copywriting dan content creator Flexor rumuskan. Pratinjau konten blog telah disesuaikan agar relevan dengan product design.
 
 - **To do**\
-lorem ipsum 25  SDGFSDGSD
+Halaman **To do** merupakan halaman yang khusus dibuat untuk memenuhi kriteria penugasan pada proyek akhir Javascript ini. Konten yang termuat di laman ini, baik *html*, *css*, dan *javascript* dibuat sendiri oleh Author sesuai dengan requirement yang dibutuhkan.\
+Fitur yang tersedia di laman ini antara lain to-do item yang memuat title dan description. Setiap item pada to-do list ini dapat dihapus dan ditandai *done* atau selesai. Terdapat fitur tambahan juga di bawahnya, yakni hapus seluruh to-do item dan hapus semua to-do item yang telah ditandai *done*. To-do list yang tampil akan otomatis ter-*render* apabila ada perubahan tanpa harus me-*refresh* halaman.
 
 ---
 ### Kelengkapan bagian halaman
-lorem ipsum blah blah, heading, body, footer
+Seluruh halaman yang ada pada web Flexor memiliki struktur yang jelas, yakni terdapat header yang berupa navigation bar seperti aplikasi web pada umumnya yang memiliki tujuan untuk mengakses seluruh halaman yang ada.\
+Setelah header terdapat body yang terdiri dari beberapa section tergantung jenis dari halaman tersebut. Terakhir, terdapat footer yang memuat rangkuman informasi dari web Flexor itu sendiri.
 
 ---
 ### Halaman Simple Todo Apps
+*sudah dijelaskan pada bagian laman to-do di poin pertama di atas*.
 
 ---
 ### Special Javascript requiremrent
