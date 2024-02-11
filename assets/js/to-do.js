@@ -35,6 +35,7 @@ const createTodoElement = (id, status, title, description) => {
     "footer-card d-flex gap-4 justify-content-end"
   );
 
+  // Fungsi pada button Done
   const actionDone = document.createElement("span");
   actionDone.setAttribute("class", "action done");
   actionDone.textContent = "✅ ";
@@ -67,6 +68,8 @@ const createTodoElement = (id, status, title, description) => {
   const actionClear = document.createElement("span");
   actionClear.setAttribute("class", "action clear");
   actionClear.textContent = "❌ ";
+
+  // Fungsi pada button Clear
   actionClear.addEventListener("click", () => {
     todoListArray.splice(id, 1);
     localStorage.setItem("todoList", JSON.stringify(todoListArray));
