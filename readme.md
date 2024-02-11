@@ -36,11 +36,22 @@ Setelah header terdapat body yang terdiri dari beberapa section tergantung jenis
 
 ---
 ### Halaman Simple Todo Apps
-*sudah dijelaskan pada bagian laman to-do di poin pertama di atas*.
+*Fungsi sudah dijelaskan pada bagian laman to-do di poin pertama di atas*.\
+Berikut merupakan tampilan awal halaman to-do.
+<br/> \
+<img src="https://github.com/afintchtr/bootcamp-final-js-v2/assets/77919010/e2ffb3f7-4f28-490f-a4de-f0737620878e" width="800">
+<br/> \
+Sedangkan di bawah ini merupakan tampilan to-do-list yang telah diisi 2 item di mana salah satunya memiliki status *done*
+<br/> \
+<img src="https://github.com/afintchtr/bootcamp-final-js-v2/assets/77919010/934e55ff-6cf7-4b1a-9dea-df72c4b0c6e8" width="800">
+<br/> \
+Terlihat bahwa di bawah to-do-list terdapat dua button yang memiliki fungsi sesuai dengan tulisan yang termuat di dalamnya.
 
 ---
-### Special Javascript requiremrent
+### Javascript *special requiremrents*
+Sesuai dengan panduan penugasan 
 
+***
 Credit to:
 
 Template Name: Flexor\
