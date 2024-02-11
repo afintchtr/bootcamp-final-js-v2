@@ -48,7 +48,7 @@ Sedangkan di bawah ini merupakan tampilan to-do-list yang telah diisi 2 item di 
 Terlihat bahwa di bawah to-do-list terdapat dua button yang memiliki fungsi sesuai dengan tulisan yang termuat di dalamnya. To-do item ini tidak akan hilang meskipun halaman di-*refresh* karena data yang termuat juga ikut dimasukkan ke Local Storage sesuai dengan ketentuan penugasan.
 
 ---
-### Javascript *special requiremrents*
+### Javascript *special requirements*
 Sesuai dengan panduan penugasan, berikut merupakan rincian penggunaan syntax Javascript yang menjadi poin plus apabila digunakan dalam pembuatan fungsi-fungsi untuk menjalankan To-do Apps ini.
 1. Simbol `==` dan `===` \
 Pada file to-do.js baris 43 dan 138 digunakan dua operator tersebut untuk kebutuhan yang berbeda. Pertama untuk mengecek apakah status Done pada sebuah to-do item bernilai false, dan yang kedua untuk mengecek apakah field Title atau Description merupakan string kosong.
